@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+   
+    <div class="three-d-box left"></div>
+    <div class="three-d-box right"></div>
+
+    
     <div class="container">
         <h1>Blockchain based Insurance Claiming</h1>
-
-        <!-- Create Policy Form -->
         <form id="createPolicyForm">
             <label for="policyType">Policy Type:</label>
             <input type="text" id="policyType" name="policyType" required>
@@ -27,13 +30,13 @@
         <p id="createStatus"></p>
         <p id="account"></p>
 
-        <!-- View Policy Button -->
+        
         <button id="viewPolicyButton">View Policy</button>
 
-        <!-- Claim Insurance Button -->
+        
         <button id="claimInsuranceButton">Claim Insurance</button>
 
-        <!-- Claim Insurance Form -->
+        
         <div id="claimDetailsForm" style="display: none;">
             <h3>Insurance Claim Form</h3>
             <form id="claimForm">
@@ -41,8 +44,8 @@
                 <textarea id="claimReason" name="claimReason" required></textarea>
                 <br>
 
-                <label for="Coverage Amount">Coverage Amount:</label>
-                <input type="number" id="Coverage Amount" name="CoverageAmount" required>
+                <label for="CoverageAmount">Coverage Amount:</label>
+                <input type="number" id="CoverageAmount" name="CoverageAmount" required>
                 <br>
 
                 <label for="claimAmount">Claim Amount:</label>
@@ -61,7 +64,9 @@
             </form>
         </div>
 
-        <!-- Policy Table -->
+        <p id="claimStatus"></p>
+
+        
         <div id="policyTable" style="display: none;">
             <h3>Policy Information</h3>
             <table border="1">
@@ -94,8 +99,8 @@
         </div>
 
         <p id="invalidUserId" style="color: red; display: none;">Invalid User ID.</p>
-        <p id="claimStatus"></p>
     </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
     <script src="app.js"></script>
